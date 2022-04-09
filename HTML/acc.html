@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+	<head>	
+		<meta charset="UTF-8" />
+        <title>Accordion with CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">     
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>	
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />		
+	</head>
+	<body>
+	
+	<style>
+		#main {
+  margin: 50px 0;
+}
+
+#main #faq .card {
+  margin-bottom: 30px;
+  border: 0;
+}
+
+#main #faq .card .card-header {
+  border: 0;
+  -webkit-box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
+          box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
+  border-radius: 2px;
+  padding: 0;
+}
+
+#main #faq .card .card-header .btn-header-link {
+  color: #fff;
+  display: block;
+  text-align: left;
+  background: #FFE472;
+  color: #222;
+  padding: 20px;
+}
+
+#main #faq .card .card-header .btn-header-link:after {
+  content: "\f107";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  float: right;
+}
+
+#main #faq .card .card-header .btn-header-link.collapsed {
+  background: #A541BB;
+  color: #fff;
+}
+
+#main #faq .card .card-header .btn-header-link.collapsed:after {
+  content: "\f106";
+}
+
+#main #faq .card .collapsing {
+  background: #FFE472;
+  line-height: 30px;
+}
+
+#main #faq .card .collapse {
+  border: 0;
+}
+
+#main #faq .card .collapse.show {
+  background: #FFE472;
+  line-height: 30px;
+  color: #222;
+}
+	</style>
+	
+	
+	<div id="main">
+  <div class="container">
+<div class="accordion" id="faq">
+                    <div class="card">
+                        <div class="card-header" id="faqhead1">
+                            <a href="#" class="btn btn-header-link" data-toggle="collapse" data-target="#faq1"
+                            aria-expanded="true" aria-controls="faq1">S.S.S</a>
+                        </div>
+
+                        <div id="faq1" class="collapse show" aria-labelledby="faqhead1" data-parent="#faq">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="faqhead2">
+                            <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq2"
+                            aria-expanded="true" aria-controls="faq2">S.S.S</a>
+                        </div>
+
+                        <div id="faq2" class="collapse" aria-labelledby="faqhead2" data-parent="#faq">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="faqhead3">
+                            <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq3"
+                            aria-expanded="true" aria-controls="faq3">S.S.S</a>
+                        </div>
+
+                        <div id="faq3" class="collapse" aria-labelledby="faqhead3" data-parent="#faq">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+  </div>
+  
+  <style>
+ /*hamburger menu*/
+.hamburger-menu {
+  z-index:2;
+	position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 100px;
+	height: 60px;
+	cursor: pointer;
+}
+
+.bar,
+.bar:after,
+.bar:before {
+  width: 100px;
+	height: 10px;
+}
+
+.bar {
+	position: relative;
+	transform: translateY(25px);
+	background: red;
+	transition: all 0ms 300ms;
+}
+
+.bar.animate {
+  background: rgba(255, 255, 255, 0); 
+}
+
+.bar:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 25px;
+	background: red;
+	transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 25px;
+	background: red;
+	transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate:after {
+	top: 0;
+	transform: rotate(45deg);
+	transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+.bar.animate:before {
+	bottom: 0;
+	transform: rotate(-45deg);
+	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+/*nav menu*/
+.show {
+  right:0%;
+  opacity:1;
+}
+
+.hide {
+  opacity:0;
+  right:-300px;
+}
+
+.mobile-nav {
+  background:rgba(52,73,94,0.9);
+  position:absolute;
+  top:0;
+  width:300px;
+  height:100vh;
+  text-align:center;
+  transition: .2s ease;
+  /*  transition: opacity .5s ease;
+  -moz-transition: opacity .5s ease;
+  -webkit-transition: opacity .5s ease;
+  transition:left .5s ease-in-out;*/
+  overflow:auto;
+}
+.mobile-nav ul{
+  position:relative;
+  top:50%;
+  transform: translateY(-50%);
+  list-style:none;
+}
+
+.mobile-nav a {
+  text-align:center;
+  font-size:4vw;
+  color:#ffffff;
+  opacity:0;
+  transition:opacity .9s ease-in-out;
+}
+
+.mobile-nav.show a {
+  text-align:center;
+  font-size:4vw;
+  color:#ffffff;
+  opacity:1;
+}
+
+.mobile-nav a:hover {
+  color:#2980b9;
+}
+body{
+overflow-x:hidden;
+}
+  </style>
+  
+
+
+
+    <div class="mobile">
+      <div class="hamburger-menu">
+          <div class="bar"></div>	
+      </div>
+    </div>  
+
+
+
+  <div class="mobile-nav hide">
+    <ul>
+      <li><a href="">about</a></li>
+      <li><a href="">menu</a></li>
+      <li><a href="">faqs</a></li>
+      <li><a href="">contact</a></li>
+	   <li><a href="">about</a></li>
+      <li><a href="">menu</a></li>
+     
+    </ul>
+  </div>
+
+
+  <script>
+  (function () {
+	$('.hamburger-menu').on('click', function() {
+		$('.bar').toggleClass('animate');
+    var mobileNav = $('.mobile-nav');
+    mobileNav.toggleClass('hide show');
+	})
+})();
+
+  </script>
+	
+	</body>
+</html>

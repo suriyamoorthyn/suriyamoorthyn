@@ -1,0 +1,8 @@
+/*Font imported */
+@import url(../fonts/fonts.css);
+
+body{
+	background:#000;
+	 font-family: 'Gilroy-Regular';
+	 color:#fff;
+}
